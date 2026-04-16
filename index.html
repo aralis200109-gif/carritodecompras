@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Coquette - Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Carga de jsPDF para el comprobante -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🎀 Boutique Coquette ✨</h1>
+        <div class="search-container">
+            <input type="text" id="filtroNombre" placeholder="Buscar tesoros... 🌸">
+        </div>
+    </header>
+
+    <main>
+        <section id="productos-section">
+            <h2>Tesoros Disponibles ✨</h2>
+            <div id="contenedor-productos" class="grid-productos"></div>
+        </section>
+
+        <aside id="carrito-section">
+            <h2>Mi Carrito 🛍️</h2>
+            <ul id="lista-carrito">
+                <!-- Se llena dinámicamente -->
+            </ul>
+            <div class="carrito-resumen">
+                <p>Total: <span id="total-precio">$0</span></p>
+                <button id="btn-comprobante" disabled>✨ Generar PDF Premium</button>
+                <button id="btn-vaciar" class="btn-secundario">Vaciar Carrito 💖</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
